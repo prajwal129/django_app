@@ -1,0 +1,118 @@
+{% load static %}
+{% static "images" as baseUrl %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outpass Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <!--Stylesheet-->
+    <style media="screen">
+    
+        /* CSS for form styling */
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('');
+            background-size: 1100px 900px;; /* Adjust to 'contain' or 'auto' as needed */
+            background-repeat: no-repeat;
+        }
+        
+        .form-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(74, 74, 73, 0.2);
+        }
+        .form-group {
+            margin-bottom: 30px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        input[type="datetime-local"],
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        /* CSS for animations (using CSS animations) */
+        @keyframes slide-in {
+            from {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+        .animated {
+            animation: slide-in 0.6s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container animated">
+        <h2>Outpass Form</h2>
+        <form method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.outpass_date.id_for_label }}">Outpass Date</label>
+                {{ form.outpass_date }}
+            </div>
+
+            <div class="form-group">
+                <label for="{{ form.outpass_time.id_for_label }}">Outpass Time</label>
+                {{ form.outpass_time }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.outpass_reason.id_for_label }}">Reason for Outpass</label>
+                {{ form.outpass_reason }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.remarks.id_for_label }}">Remarks</label>
+                {{ form.remarks }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.return_to_company.id_for_label }}">Return to Company</label>
+                {{ form.return_to_company }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.return_time.id_for_label }}">Return Time</label>
+                {{ form.return_time }}
+            </div>
+            <button type="submit"><b>Submit</b></a></button>
+
+            
+        </form>
+    </div>
+
+    <script>
+        // JavaScript for adding animation class after a delay
+        document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function () {
+                const formContainer = document.querySelector(".form-container");
+                formContainer.classList.add("animated");
+            }, 100);
+        });
+    </script>
+</body>
+</html>

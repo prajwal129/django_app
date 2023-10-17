@@ -1,0 +1,36 @@
+/* styles.css */
+
+.dark-container {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Text color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Box shadow for the container */
+  }
+  
+  .fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  javascript
+  Copy code
+  // Script to add fade-in animation when the page loads
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.querySelector('.fade-in');
+    setTimeout(() => {
+      form.classList.add('active');
+    }, 100);
+  });
+  This consolidated code simplifies the structure and combines the JavaScript animation trigger with the initial page load, making it more concise and easier to manage. It provides a fade-in animation for your form on a dark-themed background.
+  
+  
+  
+  
+  
+  

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toyota Kirloskar Auto Parts Dashboards</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/ai-technology-brain-background-digital-transformation-concept_53876-124672.jpg'); /* Replace 'your-background-image.jpg' with the actual image URL */
+            background-size: cover;
+            background-position: center;
+            background-size: cover; /* Adjust to 'contain' or 'auto' as needed */
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .header {
+            background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background for the header */
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 15px 30px; /* Increase button size */
+            margin: 10px;
+            font-size: 24px; /* Increase font size */
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        /* Create animation for buttons */
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(-20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        .animated-button {
+            animation: fadeIn 1s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Toyota Kirloskar Auto Parts Dashboards</h1>
+    </div>
+    <div class="container">
+        <button class="button animated-button"><a href="https://app.powerbi.com/view?r=eyJrIjoiNjhiNzQ2YWMtMTM4Ny00N2YyLTgxY2UtMDE1MTVhMmRjY2Q2IiwidCI6IjU3YjkzOTBkLTkxZDUtNGZiZC04ODAwLThmZTgxY2MwNTI5ZCJ9">A400</a> </button>
+        <button class="button animated-button"><a href="https://app.powerbi.com/view?r=eyJrIjoiNTllM2U4N2YtMGNjMi00YzU5LWI0YjYtYmIzOWQ3N2RjMzc5IiwidCI6IjU3YjkzOTBkLTkxZDUtNGZiZC04ODAwLThmZTgxY2MwNTI5ZCJ9">E-Drive</a> </button>
+        <button class="button animated-button">3Units</button>
+        <button class="button animated-button">R-Transmission</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Leoni</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Leoni">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            background: #111;
+        }
+        .typing {
+            height: 1em;
+            width: auto;
+        }
+        .center {
+            font-size: 18px;
+            color: #f5f5f5;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: "Roboto", sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        
+        <h1>Leoni</h1>
+        <svg viewBox="0 0 24 12" class="typing">
+            <circle r="2" cx="4" cy="10" fill="currentColor">
+                <animate attributeName="cy" values="10; 3; 10" dur="1.5s" begin="0s" repeatCount="indefinite" keyTimes="0;0.75;1" keySplines="1 0 1 0 1 0 1 0" calcMode="spline" />
+            </circle>
+            <circle r="2" cx="12" cy="10" fill="currentColor">
+                <animate attributeName="cy" values="10; 3; 10" dur="1.5s" begin="-0.4s" repeatCount="indefinite" keyTimes="0;0.75;1" keySplines="1 0 1 0 1 0 1 0" calcMode="spline" />
+            </circle>
+            <circle r="2" cx="20" cy="10" fill="currentColor">
+                <animate attributeName="cy" values="10; 3; 10" dur="1.5s" begin="-0.8s" repeatCount="indefinite" keyTimes="0;0.75;1" keySplines="1 0 1 0 1 0 1 0" calcMode="spline" />
+            </circle>
+        </svg>
+    </div>
+</body>
+</html>
+
